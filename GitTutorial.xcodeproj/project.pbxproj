@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0441B393F33E91D383C2737C /* Pods_GitTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7779F46D9FB5B7EBC558B4B9 /* Pods_GitTutorial.framework */; };
 		2A5DD36721E9B992007586E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DD36621E9B992007586E5 /* AppDelegate.swift */; };
 		2A5DD36921E9B992007586E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DD36821E9B992007586E5 /* ViewController.swift */; };
 		2A5DD36C21E9B992007586E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5DD36A21E9B992007586E5 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		2A5DD36D21E9B994007586E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A5DD37021E9B994007586E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A5DD37221E9B994007586E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7779F46D9FB5B7EBC558B4B9 /* Pods_GitTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC12B6310759BE5512DE2AA7 /* Pods-GitTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitTutorial/Pods-GitTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC92CA0B3B2EDB6A800752B /* Pods-GitTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitTutorial/Pods-GitTutorial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0441B393F33E91D383C2737C /* Pods_GitTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2A5DD36521E9B992007586E5 /* GitTutorial */,
 				2A5DD36421E9B992007586E5 /* Products */,
+				887570D29CBDFD2821BB5D4B /* Pods */,
+				A1E0DF01C4C7FC7F90B6B82E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = GitTutorial;
 			sourceTree = "<group>";
 		};
+		887570D29CBDFD2821BB5D4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC12B6310759BE5512DE2AA7 /* Pods-GitTutorial.debug.xcconfig */,
+				BAC92CA0B3B2EDB6A800752B /* Pods-GitTutorial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1E0DF01C4C7FC7F90B6B82E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7779F46D9FB5B7EBC558B4B9 /* Pods_GitTutorial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A5DD37521E9B994007586E5 /* Build configuration list for PBXNativeTarget "GitTutorial" */;
 			buildPhases = (
+				736DF19D1BD996703C040C47 /* [CP] Check Pods Manifest.lock */,
 				2A5DD35F21E9B992007586E5 /* Sources */,
 				2A5DD36021E9B992007586E5 /* Frameworks */,
 				2A5DD36121E9B992007586E5 /* Resources */,
+				C00DDB7A434F821B6934D8D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		736DF19D1BD996703C040C47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitTutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C00DDB7A434F821B6934D8D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GitTutorial/Pods-GitTutorial-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitTutorial/Pods-GitTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A5DD35F21E9B992007586E5 /* Sources */ = {
@@ -280,15 +345,13 @@
 		};
 		2A5DD37621E9B994007586E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC12B6310759BE5512DE2AA7 /* Pods-GitTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GY78G8AL9C;
 				INFOPLIST_FILE = GitTutorial/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parto.GitTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -298,15 +361,13 @@
 		};
 		2A5DD37721E9B994007586E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAC92CA0B3B2EDB6A800752B /* Pods-GitTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GY78G8AL9C;
 				INFOPLIST_FILE = GitTutorial/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parto.GitTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

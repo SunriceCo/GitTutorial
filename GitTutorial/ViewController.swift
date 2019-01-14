@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let message = "Hello Git!"
+    let message = "Hello Git!: Added SDWebImage Pod"
     
     @IBOutlet weak var reverseLabel: UILabel!
     override func viewDidLoad() {
